@@ -40,3 +40,5 @@ ENV PATH="/go/bin:/usr/local/go/bin:${PATH}"
 
 RUN mkdir -p /work
 WORKDIR /work
+
+CMD [ "go", "build" ]
