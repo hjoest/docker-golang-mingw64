@@ -4,15 +4,13 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -y && \
     apt-get install -y --no-install-recommends \
-                    build-essential ca-certificates file git \
-                    libarchive-tools pkg-config protobuf-compiler \
-                    upx wget xz-utils zstd
-
-RUN apt-get install -y --no-install-recommends \
-                    g++-mingw-w64 gcc-mingw-w64 gcc-mingw-w64-x86-64 \
-                    gdb-mingw-w64 gdb-mingw-w64-target make mingw-w64 \
-                    mingw-w64-common mingw-w64-tools mingw-w64-x86-64-dev \
-                    wine64 wine64-development wine64-development-preloader
+                    build-essential ca-certificates file g++-mingw-w64 \
+                    gcc-mingw-w64 gcc-mingw-w64-x86-64 gdb-mingw-w64 \
+                    gdb-mingw-w64-target git libarchive-tools make \
+                    mingw-w64 mingw-w64-common mingw-w64-tools \
+                    mingw-w64-x86-64-dev msitools pkg-config \
+                    protobuf-compiler upx wget wine64 wine64-development \
+                    wine64-development-preloader wixl xz-utils zstd
 
 RUN apt-get clean -y && \
     rm -rf /var/lib/apt/lists
